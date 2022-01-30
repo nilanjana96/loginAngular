@@ -1,0 +1,23 @@
+form{
+    width: 50%;
+}
+div.form-group{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 2rem;
+}
+button{
+    padding: 0.5rem;
+    width: 6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+input{
+    padding: 0.5rem;
+}
+div.row{
+    padding: 0 2rem!important;
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DatashareService } from '../datashare.service';
 
 @Component({
   selector: 'app-login-form',
@@ -11,7 +13,12 @@ export class LoginFormComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private datashare:DatashareService) { 
+
+  }
+  navigate(){
+      this.router.navigate(['dashboard'])
+  }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
@@ -30,7 +37,7 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
       this.submitted = true;
-
+       this.datashare.storeName(this.registerForm.value.email);
       // stop here if form is invalid
       if (this.registerForm.invalid) {
           return;

@@ -7,6 +7,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+
 // import { CharacterOnlyDirective } from "./login/directives/CharacterOnlyDirective";
 
 @NgModule({

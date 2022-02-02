@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -10,7 +12,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     LoginRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
   ],
   declarations: [LoginFormComponent]
 })
